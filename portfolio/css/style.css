@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@font-face {
+    font-family: 'crystal';
+    src: url('/portfolio/fonts/crystal_universe/CrystalUniverse-Oblique.ttf') format('truetype'), url('/portfolio/fonts/crystal_universe/CrystalUniverse-Oblique.otf') format('opentype'), url('/portfolio/fonts/crystal_universe/CrystalUniverse-Regular.otf') format('opentype'), url('/portfolio/fonts/crystal_universe/CrystalUniverse-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 200;
+}
+
+@keyframes animation {
+ 
+    0% {
+        transform: translateX(100rem);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes ball {
+    0% {
+        transform: translateY(-30rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    background-image: linear-gradient(to bottom right, #03191e, #011638);
+    color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2rem;
+    padding-top: 1.8rem;
+    color: #03191e;
+    background-color: #d64550;
+    padding-bottom: 1.8rem;
+}
+
+span#burguer {
+    color: #ccc;
+    background-color: #011638;
+    display: block;
+    justify-content: center;
+    text-align: center;    
+    align-items: center;
+    padding: .5rem;
+    cursor: pointer;
+}
+
+span#burguer:hover {
+    background-color: #ccc;
+    color: #011638;
+}
+
+menu {
+    display: none;
+}
+
+menu > ul {
+    display: flex;
+}
+
+menu > ul > li > a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: 500;
+    list-style: none;
+    color: #ccc;
+    padding: 1rem 5rem;
+}
+
+menu > ul > li > a:hover {
+    background-color: #ccc;
+    border-radius: 3rem;
+    color: #011638;
+}
+
+/* MAIN */
+
+main {
+    margin: auto;
+}
+
+#profile {
+    background-color: cornflowerblue;
+    border: .1rem solid cornflowerblue;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    animation: ball 1s;
+}
+
+#bunny {
+    width: 10rem;
+    height: 10rem;
+}
+
+.start-me {
+    font-size: 3rem;
+}
+
+h1 {
+    font-family: 'crystal', sans-serif;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+    color: #03191e;
+    animation: animation 1s;
+}
+
+#contact {
+    background: none;
+    font-size: 1.8rem;
+    padding: .4rem 2rem;
+    color: #ccc;
+    border-radius: 2rem;
+    border: .1rem solid #ffffff;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+p {
+    font-size: 1.6rem;
+}
+
+#start {
+    height: 30rem;
+}
+
+#about-me {
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+section {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+footer {
+    font-size: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+i {
+    width: 10rem;
+    height: 10rem;
+}
+
+input {
+    border-radius: 2rem;
+    padding: 1rem;
+}
+
+input::placeholder {
+    color: rgb(150, 150, 150);
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+input#msg {
+    width: 50rem;
+    height: 20rem;
+}
+
+input#msg::placeholder {
+    position: relative;
+    bottom: 8rem;
+}
+
+#submit {
+    background-color: #d64550;
+    padding: 1rem 5rem;
+    color: #ffffff;
+    border-radius: 2rem;
+}
